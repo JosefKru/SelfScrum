@@ -1,3 +1,6 @@
 # Ignore directory
-build/
-node_modules/
+/build
+/node_modules/
+
+# Ignore files
+.gitignore
