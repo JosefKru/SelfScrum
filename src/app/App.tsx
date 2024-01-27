@@ -1,12 +1,11 @@
-import { useState, Suspense, useContext } from 'react';
-import style from './Test.module.scss';
+import { useState, Suspense } from 'react';
 import './style/index.scss';
 import { Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { AboutPageAsync } from './pages/AboutPage/AboutPage.async';
-import { MainPageAsync } from './pages/MainPage/MainPage.async';
-import { useTheme } from './theme/useTheme';
-import { classNames } from './helpers/classNames/classNames';
+import { useTheme } from './providers/ThemeProvider';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AboutPage } from 'pages/AboutPage';
+import { MainPage } from 'pages/MainPage';
 
 const App = () => {
   const [count, setCount] = useState<number>(0);  
@@ -16,8 +15,8 @@ const App = () => {
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path='/about' element={<AboutPageAsync />} />
-          <Route path='/' element={<MainPageAsync />} />
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='/' element={<MainPage />} />
         </Routes>
       </Suspense>
       <h1>{count}</h1>
@@ -25,11 +24,11 @@ const App = () => {
       <br />
       <Link to='/'>Main Page</Link>
       <br />
-      <button onClick={() => setCount(count + 1)} className={style.btn}>
+      <button onClick={() => setCount(count + 1)}>
         PLUS
       </button>
       <br />
-      <button onClick={toggleTheme} className={style.btn}>
+      <button onClick={toggleTheme}>
         Toggle Theme
       </button>
     </div>
