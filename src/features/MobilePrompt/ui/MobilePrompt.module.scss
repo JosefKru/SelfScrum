@@ -1,0 +1,20 @@
+/* MobilePrompt.css */
+.mobilePrompt {
+  background-color: #ffeaa7; /* Цвет фона */
+  padding: 15px;
+  border: 1px solid #fdcb6e; /* Цвет рамки */
+  border-radius: 5px;
+  margin: 20px;
+  text-align: center;
+  font-size: 32px;
+  color: #2d3436; /* Цвет текста */
+}
+
+/* Дополнительные стили для адаптивности на мобильных устройствах */
+@media (max-width: 768px) {
+  .mobilePrompt {
+    display: none;
+    margin: 10px;
+    font-size: 14px;
+  }
+}

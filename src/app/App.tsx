@@ -1,39 +1,25 @@
-import { useState, Suspense } from 'react';
-import './style/index.scss';
-import { Route, Routes } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { useTheme } from './providers/ThemeProvider';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { AboutPage } from 'pages/AboutPage';
-import { MainPage } from 'pages/MainPage';
+import "./style/index.scss";
+import { classNames } from "shared/lib/classNames/classNames";
+import { useTheme } from "./providers/ThemeProvider";
+import { AppRouter } from "./providers/router";
+import { MobilePrompt } from "features/MobilePrompt";
+import { Navbar } from "widgets/Navbar";
 
 const App = () => {
-  const [count, setCount] = useState<number>(0);  
-  const {theme, toggleTheme} = useTheme()
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={classNames('app', {}, [theme])}>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path='/about' element={<AboutPage />} />
-          <Route path='/' element={<MainPage />} />
-        </Routes>
-      </Suspense>
-      <h1>{count}</h1>
-      <Link to='/about'>About Page</Link>
-      <br />
-      <Link to='/'>Main Page</Link>
-      <br />
-      <button onClick={() => setCount(count + 1)}>
-        PLUS
-      </button>
-      <br />
-      <button onClick={toggleTheme}>
-        Toggle Theme
-      </button>
-    </div>
+    <>
+      <MobilePrompt />
+      <div className={classNames("app", {}, [theme])}>
+        <main>
+          <AppRouter />
+          <button onClick={toggleTheme}>Toggle Theme</button>
+        </main>
+        <Navbar />
+      </div>
+    </>
   );
 };
-
 
 export default App;

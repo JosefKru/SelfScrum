@@ -1,12 +1,27 @@
-@import 'reset';
-@import 'variables/global';
-@import 'themes/normal';
-@import 'themes/dark';
+@import "reset";
+@import "variables/global";
+@import "themes/normal";
+@import "themes/dark";
 
 .app {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .app {
+    display: block;
     font: var(--font-m);
     background: var(--bg-color);
     color: var(--text-color);
-
     min-height: 100vh;
+  }
+
+  main {
+    padding: 20px;
+  }
 }
