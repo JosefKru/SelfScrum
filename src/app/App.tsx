@@ -4,9 +4,10 @@ import { useTheme } from "./providers/ThemeProvider";
 import { AppRouter } from "./providers/router";
 import { MobilePrompt } from "features/MobilePrompt";
 import { Navbar } from "widgets/Navbar";
+import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <>
@@ -14,7 +15,7 @@ const App = () => {
       <div className={classNames("app", {}, [theme])}>
         <main>
           <AppRouter />
-          <button onClick={toggleTheme}>Toggle Theme</button>
+          <ThemeSwitcher />
         </main>
         <Navbar />
       </div>
