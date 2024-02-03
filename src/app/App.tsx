@@ -5,6 +5,7 @@ import { AppRouter } from "./providers/router";
 import { MobilePrompt } from "features/MobilePrompt";
 import { Navbar } from "widgets/Navbar";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
+import { Login } from "features/Login";
 
 const App = () => {
   const { theme } = useTheme();
@@ -16,6 +17,7 @@ const App = () => {
         <main>
           <AppRouter />
           <ThemeSwitcher />
+          <Login />
         </main>
         <Navbar />
       </div>
