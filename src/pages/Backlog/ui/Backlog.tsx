@@ -1,9 +1,6 @@
 import { AddTask } from "features/AddTask";
 import { db } from "./../../../../config/firebase/firestore";
 import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  addDoc,
   collection,
   getDocs,
   orderBy,

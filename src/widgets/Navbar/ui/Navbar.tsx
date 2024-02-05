@@ -14,7 +14,7 @@ const Navbar = ({ className }: NavbarProps) => {
         About
       </AppLink>
       <AppLink to="/">Backlog</AppLink>
-      <AppLink to="/">Backlog</AppLink>
+      <AppLink to="/signIn">SignIn</AppLink> {/* надо переделать на /auth */}
       <AppLink to="/">Backlog</AppLink>
     </div>
   );
