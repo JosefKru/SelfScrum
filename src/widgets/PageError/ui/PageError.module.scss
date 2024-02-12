@@ -1,0 +1,30 @@
+@media (max-width: 767px) {
+    .pageError {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+      color: #dc3545;
+    }
+  
+    .pageError h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      text-align: center;
+    }
+  
+    .pageError .reloadButton {
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  }
+  

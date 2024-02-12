@@ -37,87 +37,9 @@ a {
   color: inherit;
 }
 
-/* Сброс стилей для заголовков */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
 /* Сброс стилей для изображений */
 img {
   border: none;
   max-width: 100%;
   height: auto;
-}
-
-// /* Сброс стилей для формы */
-// button,
-// input,
-// select,
-// textarea {
-//   margin: 0;
-//   border: none;
-//   border-radius: 0;
-//   background: none;
-//   font-size: inherit;
-//   color: inherit;
-//   outline: none;
-//   appearance: none;
-// }
-
-// /* Сброс стилей для кнопок */
-// button {
-//   padding: 0;
-//   cursor: pointer;
-// }
-
-// /* Сброс стилей для полей ввода */
-// input[type='text'],
-// input[type='number'],
-// input[type='search'],
-// input[type='password'],
-// textarea {
-//   resize: none;
-// }
-
-// /* Сброс стилей для списков внутри кнопок */
-// button ul,
-// button ol,
-// button li,
-// input[type='submit'] ul,
-// input[type='submit'] ol,
-// input[type='submit'] li {
-//   list-style: none;
-// }
-
-/* Сброс стилей для полос прокрутки */
-::-webkit-scrollbar {
-  width: 0.5em;
-  height: 0.5em;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-/* Сброс стилей для элементов HTML5 */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
 }
