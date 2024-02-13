@@ -1,6 +1,12 @@
+import { Counter } from "entities/Counter"
+
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <div>
+      <p>AboutPage</p>
+      <br />
+      <Counter />
+    </div>
   )
 }
 

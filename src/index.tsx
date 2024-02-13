@@ -4,9 +4,11 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "app/providers/ThemeProvider";
 import { AuthProvider } from "app/providers/AuthProvider";
 import { ErrorBoundary } from "app/providers/ErrorBoundary";
+import { StoreProvider } from "app/providers/StoreProvider";
 
 render(
   <BrowserRouter>
+  <StoreProvider>
     <ErrorBoundary>
       <ThemeProvider>
         <AuthProvider>
@@ -14,6 +16,7 @@ render(
         </AuthProvider>
       </ThemeProvider>
     </ErrorBoundary>
+    </StoreProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );

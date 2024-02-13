@@ -5,6 +5,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import Dotenv from "dotenv-webpack";
 
 export function buildPlugins({
+  isDev,
   paths,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
   return [
@@ -18,5 +19,8 @@ export function buildPlugins({
     }),
     new Dotenv(),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      '__IS_DEV__': JSON.stringify(isDev) 
+  })
   ];
 }

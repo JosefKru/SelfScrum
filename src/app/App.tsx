@@ -14,7 +14,7 @@ const App = () => {
       <MobilePrompt />
       <div className={classNames("app", {}, [theme])}>
         <main>
-          <AppRouter />
+        <AppRouter />
           <ThemeSwitcher />
         </main>
         <Navbar />

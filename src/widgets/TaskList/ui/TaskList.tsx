@@ -57,7 +57,7 @@ const TaskList = ({ className, tasks, getBacklog }: TaskListProps) => {
   return (
     <div className={classNames(style.taskList, {}, [className])}>
       {tasks.map((task) => (
-        <div key={task.id}>
+        <div key={task.id} className={style.container}>
           <div>Задача: {task.title}</div>
           <div>Описание: {task.desc}</div>
           <div>Статус: {task.status}</div>
