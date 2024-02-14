@@ -1,35 +1,29 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
-import { CounterSchema } from '../types/counterSchema'
-// import type { RootState } from '../../app/store'
+import { createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
 
 interface CounterState {
-  value: number
+  value: number;
 }
 
 const initialState: CounterState = {
   value: 0,
-}
+};
 
 export const counterSlice = createSlice({
-  name: 'counter',
+  name: "counter",
   initialState,
   reducers: {
     increment: (state) => {
-      state.value += 1
+      state.value += 1;
     },
     decrement: (state) => {
-      state.value -= 1
+      state.value -= 1;
     },
     incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload
+      state.value += action.payload;
     },
   },
-})
+});
 
-export const { actions: counterActions } = counterSlice
-export const { reducer: counterReduser } = counterSlice
-
-// export const selectCount = (state: RootState) => state.counter.value
-
-// export default counterSlice.reducer
+export const { actions: counterActions } = counterSlice;
+export const { reducer: counterReduser } = counterSlice;
