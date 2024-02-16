@@ -14,7 +14,7 @@ const Counter = () => {
     }
   return (
     <div >
-        <h1>value = {counterValue}</h1>
+        <h1>value = {'rip'}</h1>
         <Button onClick={increment}>increment +++</Button>
         <Button onClick={decrement}>decrement ---</Button>
     </div>
