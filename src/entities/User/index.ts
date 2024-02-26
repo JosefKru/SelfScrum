@@ -1,0 +1,1 @@
+export { userActions, userReduser } from "./model/slice/userSlice";

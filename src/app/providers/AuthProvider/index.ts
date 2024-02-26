@@ -1,3 +1,4 @@
-import AuthProvider, { UserAuth } from "./ui/AuthProvider";
+import { UserAuth } from './lib/AuthContext';
+import AuthProvider from "./ui/AuthProvider";
 
-export { AuthProvider, UserAuth} 
+export { AuthProvider, UserAuth}  
